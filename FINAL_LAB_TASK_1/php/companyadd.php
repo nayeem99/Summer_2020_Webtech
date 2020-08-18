@@ -3,24 +3,25 @@
 	require_once('../service/userService.php');
 
 
-	if(isset($_POST['create']))
+	if(isset($_POST['createt']))
 
 
 	{
-		$id = $_POST['id'];
-			$company_name = $_POST['company_name'];
-			$profile_description = $_POST['profile_description'];
-			$industry = $_POST['industry'];
-			$company_website = $_POST['company_website'];
-			$filedir='../pictures/'.$id.".png";
+		
 
 		if(empty($_POST['id']) || empty($_POST['company_name']) || empty($_POST['profile_description']) || empty($_POST['industry']) || empty($_POST['company_website'])|| empty($_FILES['company_logo']) )
-			
+
 		{
 			header('location: ../views/company_create.php?error=null_value');
 		}
 		else
 		{
+			$id = $_POST['id'];
+			$company_name = $_POST['company_name'];
+			$profile_description = $_POST['profile_description'];
+			$industry = $_POST['industry'];
+			$company_website = $_POST['company_website'];
+			$filedir='../pic/'.$id.".png";
 			
 			$company = [
 				'id'=> $id,

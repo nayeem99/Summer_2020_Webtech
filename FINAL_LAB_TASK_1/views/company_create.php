@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Add user</title>
+	<title>Add company info</title>
 </head>
 <body>
 
@@ -45,7 +45,7 @@
 				<td><input type="file" name="company_logo"></td>
 			</tr>
 			<tr>
-				<td><input type="submit" name="create" value="Add"></td>
+				<td><input type="submit" name="createt" value="Add"></td>
 			</tr>
 		</table>
 		</fieldset>

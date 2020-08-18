@@ -20,7 +20,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "select * from company where id={$id}";
+		$sql = "select * from company_info where id={$id}";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
 		return $row;
@@ -116,7 +116,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "select * from company";
+		$sql = "select * from company_info";
 		$result = mysqli_query($conn, $sql);
 		$users = [];
 
@@ -134,7 +134,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "insert into company values('{$user['id']}', '{$user['company_name']}','{$user['profile_description']}', '{$user['industry']}', '{$user['company_website']}', '{$user['company_logo']}', '{$user['user_account_id']}')";
+		$sql = "insert into company_info values('{$user['id']}', '{$user['company_name']}','{$user['profile_description']}', '{$user['industry']}', '{$user['company_website']}', '{$user['company_logo']}', '{$user['user_account_id']}')";
 		if(mysqli_query($conn, $sql)){
 			return true;
 		}else{
@@ -148,7 +148,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "update company set company_name='{$user['company_name']}', profile_description='{$user['profile_description']}', industry='{$user['industry']}', company_website='{$user['company_website']}', company_logo='{$user['company_logo']}' where id={$user['id']}";
+		$sql = "update company_info set company_name='{$user['company_name']}', profile_description='{$user['profile_description']}', industry='{$user['industry']}', company_website='{$user['company_website']}', company_logo='{$user['company_logo']}' where id={$user['id']}";
 		echo "<br>".$sql."<br>";
 
 		if(mysqli_query($conn, $sql)){
@@ -165,7 +165,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "DELETE FROM company WHERE id={$user['id']}";
+		$sql = "DELETE FROM company_info WHERE id={$user['id']}";
 
 		if(mysqli_query($conn, $sql)){
 			return true;
