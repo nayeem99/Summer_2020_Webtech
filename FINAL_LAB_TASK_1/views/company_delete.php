@@ -12,13 +12,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Add Company User</title>
+	<title>Delete</title>
 </head>
 <body>
 
 	<form action="../php/companyadd.php" method="post" enctype="multipart/form-data">
 		<fieldset>
-			<legend>Create New Company Information</legend>
+			<legend>Delete Information</legend>
 		<table>
 			<tr>
 				<td>ID</td>
