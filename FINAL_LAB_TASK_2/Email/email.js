@@ -5,7 +5,7 @@ function validate(){
 	
 	
 
-	if(username == ""){
+	if(email == ""){
 		document.getElementById('emailMsg').innerHTML = "Email can't left empty";
 		return false;
 
