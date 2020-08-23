@@ -45,7 +45,7 @@
 				<td><input type="file" name="company_logo"></td>
 			</tr>
 			<tr>
-				<td colspan="2" align="right"><input type="submit" name="create" value="Create"></td>
+				<td colspan="2" align="right"><input type="submit" name="addd" value="Create"></td>
 			</tr>
 		</table>
 		</fieldset>

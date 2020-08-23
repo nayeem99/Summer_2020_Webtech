@@ -66,9 +66,8 @@
 		$email 		= $_POST['email'];
 		$id 		= $_POST['id'];
 
-		if(empty($username) || empty($password) || empty($email)){
-			header('location: ../views/edit.php?id={$id}');
-		}else{
+		
+		
 
 			$user = [
 				'username'=> $username,
@@ -85,21 +84,25 @@
 				header('location: ../views/delete.php?id={$id}');
 			}
 		}
-	}
+	
+	//edit company
 
-		if(isset($_POST['editCompany'])){
+	if(isset($_POST['editcompany'])){
 
-		if(empty($_POST['company_name']) || empty($_POST['profile_description']) || empty($_POST['industry']) || empty($_POST['company_website']) || empty($_FILES['company_logo'])){
+		    $id                   = $_POST['id'];
+			$company_name         = $_POST['company_name'];
+			$profile_description  = $_POST['profile_description'];
+			$industry             = $_POST['industry'];
+			$company_website      = $_POST['company_website'];
+			$filedir              ='../pic/'.$id.".png";
+
+       //echo"null";
+	if(empty($_POST['company_name']) || empty($_POST['profile_description']) || empty($_POST['industry']) || empty($_POST['company_website']) || empty($_FILES['company_logo'])){
 			header('location: ../views/company_edit.php?id={$id}');
 		}
 		else{
 
-			$id = $_POST['id'];
-			$company_name = $_POST['company_name'];
-			$profile_description = $_POST['profile_description'];
-			$industry = $_POST['industry'];
-			$company_website = $_POST['company_website'];
-			$filedir='../pic/'.$id.".png";
+			
 			$company = [
 				'id'=> $id,
 				'company_name'=> $company_name,
@@ -112,7 +115,7 @@
 			var_dump($company);
 
 			$status = updateCompany($company);
-			echo $status;
+			//echo $status;
 			if($status){
 				if(move_uploaded_file($_FILES['company_logo']['tmp_name'], $filedir))
 				{
@@ -124,14 +127,16 @@
 			}
 		}
 	}
-	if(isset($_POST['deleteCompany'])){
 
-		$id = $_POST['id'];
-		$company_name = $_POST['company_name'];
+	//delete company
+	if(isset($_POST['deletecompany'])){
+
+		$id                  = $_POST['id'];
+		$company_name        = $_POST['company_name'];
 		$profile_description = $_POST['profile_description'];
-		$industry = $_POST['industry'];
-		$company_website = $_POST['company_website'];
-		$filedir='../pictures/'.$id.".png";
+		$industry            = $_POST['industry'];
+		$company_website     = $_POST['company_website'];
+		$filedir             ='../pictures/'.$id.".png";
 		$company = [
 			'id'=> $id,
 			'company_name'=> $company_name,
@@ -148,7 +153,7 @@
 			header('location: ../views/company_info.php?success=done');
 		}
 		else{
-			header('location: ../views/company_delete.php?id={$id}');
+			header('location: ../views/company_delete.php?id={$id}null');
 		}
 	}
 
@@ -157,4 +162,3 @@
 ?>
 
 
-?>

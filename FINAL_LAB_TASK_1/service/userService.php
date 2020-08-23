@@ -13,19 +13,7 @@
 		$row = mysqli_fetch_assoc($result);
 		return $row;
 	}
-	function getByIDCompany($id){
-		$conn = dbConnection();
-
-		if(!$conn){
-			echo "DB connection error";
-		}
-
-		$sql = "select * from company_info where id={$id}";
-		$result = mysqli_query($conn, $sql);
-		$row = mysqli_fetch_assoc($result);
-		return $row;
-	}
-
+	
 	function getAllUser(){
 		$conn = dbConnection();
 
@@ -109,6 +97,20 @@
 		}
 	}
 
+	function getByIDCompany($id){
+		$conn = dbConnection();
+
+		if(!$conn){
+			echo "DB connection error";
+		}
+
+		$sql = "select * from company_info where id={$id}";
+		$result = mysqli_query($conn, $sql);
+		$row = mysqli_fetch_assoc($result);
+		return $row;
+	}
+
+
 	function getAllCompany(){
 		$conn = dbConnection();
 
@@ -165,7 +167,7 @@
 			echo "DB connection error";
 		}
 
-		$sql = "DELETE FROM company WHERE id={$user['id']}";
+		$sql = "DELETE FROM company_info WHERE id={$user['id']}";
 
 		if(mysqli_query($conn, $sql)){
 			return true;
