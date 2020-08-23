@@ -8,7 +8,7 @@
 		if(empty($_POST['id']) || empty($_POST['company_name']) || empty($_POST['profile_description']) || empty($_POST['industry']) || empty($_POST['company_website']) || empty($_FILES['company_logo']))
 
 		{
-			//header('location: ../views/company_create.php?error=null_value');
+			header('location: ../views/company_create.php?error=null_value');
 		}
 		else
 		{
@@ -17,7 +17,7 @@
 			$profile_description = $_POST['profile_description'];
 			$industry = $_POST['industry'];
 			$company_website = $_POST['company_website'];
-			$filedir='../pictures/'.$id.".png";
+			$filedir='../pic/'.$id.".png";
 			$company = [
 				'id'=> $id,
 				'company_name'=> $company_name,

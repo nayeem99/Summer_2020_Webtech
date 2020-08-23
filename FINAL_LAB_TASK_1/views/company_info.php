@@ -41,8 +41,8 @@
 			<td><img src=<?='"'.$users[$i]['company_logo'].'"'?>height="200px" width="200px"></td>
 			<td><?=$users[$i]['user_account_id']?></td>
 			<td>
-				<a href="comapny_edit.php?id=<?=$users[$i]['id']?>">Edit</a> |
-				<a href="comapny_delete.php?id=<?=$users[$i]['id']?>">Delete</a> 
+				<a href="company_edit.php?id=<?=$users[$i]['id']?>">Edit</a> |
+				<a href="company_delete.php?id=<?=$users[$i]['id']?>">Delete</a> 
 				
 			</td>
 		</tr>

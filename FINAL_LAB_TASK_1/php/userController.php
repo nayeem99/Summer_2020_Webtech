@@ -39,7 +39,7 @@
 		$id 		= $_POST['id'];
 
 		if(empty($username) || empty($password) || empty($email)){
-			header('location: ../views/edit.php?id={$id}');
+			header('location: ../views/company_edit.php?id={$id}');
 		}else{
 
 			$user = [
@@ -99,7 +99,7 @@
 			$profile_description = $_POST['profile_description'];
 			$industry = $_POST['industry'];
 			$company_website = $_POST['company_website'];
-			$filedir='../pictures/'.$id.".png";
+			$filedir='../pic/'.$id.".png";
 			$company = [
 				'id'=> $id,
 				'company_name'=> $company_name,
