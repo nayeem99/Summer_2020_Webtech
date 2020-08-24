@@ -4,9 +4,9 @@ function validate()
 	var d2=document.getElementById('d2').value;
 	var d3=document.getElementById('d3').value;
 
-	if (d1!="" || d2!="" || d3!="") 
+	if (d1.value!="" || d2.value!="" || d3.value!="") 
 	{
-		
+		return true;
 	
 	}
 else
