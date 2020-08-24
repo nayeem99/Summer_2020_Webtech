@@ -4,7 +4,7 @@ function validate()
 	var d2=document.getElementById('d2').value;
 	var d3=document.getElementById('d3').value;
 
-	if (d1.value!="" || d2.value!="" || d3.value!="") 
+	if (d1.checked || d2.checked || d3.checked) 
 	{
 		return true;
 	
@@ -14,6 +14,7 @@ else
 	document.getElementById('degreeMsg').innerHTML=" can not be empty";
 		return false;
 
+}
 }
 
 function remover()

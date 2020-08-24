@@ -24,5 +24,6 @@ function validate()
 }
 function remover()
 {
+	if(day!="" || month!="" || year!="" )
 	document.getElementById('dobMsg').innerHTML="";
 }
