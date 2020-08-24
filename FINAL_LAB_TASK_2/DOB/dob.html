@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Name</title>
+	<script type="text/javascript" src="dob.js"></script>
+</head>
+<body>
+
+	<h1>Date of birth</h1>
+
+	
+		
+	</h2>
+
+		<form action="dob.php" method="post" onsubmit="return validate()">
+			<table>
+				<fieldset>
+			<legend>Date of Birth</legend>
+			<pre class="tab">dd        mm      yyyy</pre><br>
+			<input type="text" id="day" name="day" size="1%" onkeyup="remover()">/
+			<input type="text" id="month" name="month" size="1%" onkeyup="remover()">/
+			<input type="text" id="year" name="year" size="2%" onkeyup="remover()"><br><br>
+				<input type="submit" name="submit" value="Submit">
+		</fieldset>
+				
+			
+			<tr>
+				<td id="dobMsg"></td>
+			</tr>
+			</table>
+		
+		</form>
+	
+</body>
+</html>
