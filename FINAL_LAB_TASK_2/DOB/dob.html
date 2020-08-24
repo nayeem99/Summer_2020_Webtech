@@ -13,23 +13,20 @@
 	</h2>
 
 		<form action="dob.php" method="post" onsubmit="return validate()">
-			<table>
-				<fieldset>
+		<fieldset>
 			<legend>Date of Birth</legend>
-			<pre class="tab">dd        mm      yyyy</pre><br>
+			<pre class="tab">dd   mm     yyyy</pre><br>
 			<input type="text" id="day" name="day" size="1%" onkeyup="remover()">/
 			<input type="text" id="month" name="month" size="1%" onkeyup="remover()">/
-			<input type="text" id="year" name="year" size="2%" onkeyup="remover()"><br><br>
-				<input type="submit" name="submit" value="Submit">
-		</fieldset>
-				
-			
-			<tr>
-				<td id="dobMsg"></td>
-			</tr>
+			<input type="text" id="year"	name="year" size="2%" onkeyup="remover()"><br>
+			<br>
+			<input type="submit" name="submit" value="submit">
+			<table>
+				<tr>
+					<td id="dobMsg"></td>
+				</tr>
 			</table>
-		
-		</form>
-	
+		</fieldset>
+	</form>
 </body>
 </html>
