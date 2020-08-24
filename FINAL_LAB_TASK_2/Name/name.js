@@ -1,20 +1,8 @@
 
 
-var abc = [];
 
-function f1(){
-	var element = document.getElementsByTagName('h1')[0];
-	element.innerHTML = "Test";
-}
 
-var f2 = function(){
-	var element = document.getElementsByTagName('h1')[0];
-	element.innerHTML = "Test";
-}
 
-//document.getElementsByTagName('h2')[0]
-var head2 = document.getElementById('head2');
-	head2.innerHTML = f2();
 
 
 function validate(){
@@ -28,7 +16,21 @@ function validate(){
 		document.getElementById('userMsg').innerHTML = "username can't left empty";
 		return false;
 
-	}else if(password == ""){
+	}
+	 else if(username.split(" ").length<2){
+   
+    document.getElementById('userMsg').innerHTML="At least two characters are needed";
+    return false;
+
+  }
+  else if(username.split(" ").length<2 && username>='0' && username<='9')
+    {   
+         document.getElementById("userMsg").innerHTML="Must be starts with letter ";  
+        return false;
+
+    }
+
+	if(password == ""){
 		document.getElementById('passMsg').innerHTML = "password can't left empty";
 		return false;
 	}else{
