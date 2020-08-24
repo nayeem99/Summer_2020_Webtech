@@ -22,7 +22,7 @@ function validate()
  
    {
 
-	document.getElementById('Msg').innerHTML="Choose a picture";
+	document.getElementById('Msg').innerHTML="Can not be empty";
 		return false;
    }
 
