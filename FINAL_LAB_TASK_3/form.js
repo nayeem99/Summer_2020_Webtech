@@ -70,6 +70,8 @@ var email = document.getElementById('email').value;
 		dobval= false;
 	}
 
+
+
     var bgval=false;
 	var a=document.form.bg;
 	if (a.value == "") 
@@ -83,28 +85,42 @@ var email = document.getElementById('email').value;
 	}
 
 
-    //var degreeval=false;
-  // var d1=document.getElementById('d1').value;
-	//var d2=document.getElementById('d2').value;
-	//var d3=document.getElementById('d3').value;
 
-	var degreeValid=false;
-	if(document.getElementById('d1').checked || document.getElementById('d2').checked || document.getElementById('d3').checked)
+    var degreeval=false;
+    var d1=document.getElementById('d1').value;
+	var d2=document.getElementById('d2').value;
+	var d3=document.getElementById('d3').value;
+
+	if (d1.checked || d2.checked || d3.checked) 
 	{
 		document.getElementById('degreeMsg').innerHTML="";
-		degreeValid=true;
+		degreeval= true;
+	
+	}
+   else
+   {
+	document.getElementById('degreeMsg').innerHTML=" can not be empty";
+		degreeval= false;
+
+    }
+
+
+    var pictureval=false;
+	var file=document.getElementById('file').value;
+	if(file!="")
+	{
+		document.getElementById('picmsg').innerHTML="";
+		pictureval=true;
 	}
 	else
 	{
-		document.getElementById('degreeMsg').innerHTML="Please choose an option";
-		degreeValid=false;
+		document.getElementById('picmsg').innerHTML="Select a picture";
+		pictureval=false;
 	}
-
-
 
 	//alert(genderval);
 
-	if(nameval && emailval && genderval && dobval && bgval && degreeValid)
+	if(nameval && emailval && genderval && dobval && bgval && degreeval && pictureval )
 	{
 		return true;
 	}
