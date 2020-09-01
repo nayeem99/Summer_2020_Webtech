@@ -27,7 +27,7 @@
 			    	echo"asd";
 					$sql1="INSERT INTO user (name, email, username, password, gender, dateofbirth, usertype) VALUES ('".$_POST['name']."', '".$_POST['email']."', '".$_POST['username']."', '".$_POST['password']."', '".$_POST['gender']."', '".$_POST['date']."', '".$_POST['usertype']."')";
 					mysqli_query($conn,$sql1);
-					//echo "done";
+					echo "done";
 					header('location: login.html');
 			        
 
