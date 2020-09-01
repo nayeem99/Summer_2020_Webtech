@@ -46,20 +46,20 @@
 			</table>
 		</fieldset>
 	</form>
-
-</body>
-</html>
-function f1(){
-			document.getElementsByTagNames('a')[0].style.display='inline';
-		}
-		function f1(){
+	<script type="text/javascript">
+	function f1(){
 
 				var name = document.getElementById('name').value;
+				var email = document.getElementById('email').value;
+				var password = document.getElementById('password').value;
+				if(name!=""&& email!="" && password!="")
+				{
+
 				var xhttp = new XMLHttpRequest();
 				//xhttp.open('GET', 'abc.php?name='+name, true);
 				xhttp.open('POST', 'regCheck.php', true);
 				xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-				xhttp.send('name='+name);
+				xhttp.send('name='+name+'&password='+password+'&email='+email+);
 
 				xhttp.onreadystatechange = function (){
 					if(this.readyState == 4 && this.status == 200){
@@ -70,6 +70,16 @@ function f1(){
 							document.getElementById('searchdata').innerHTML = "";
 						}
 						
-					}	
+					
 				}
+
+				}
+				document.getElementsByTagNames('a')[0].style.display='inline';
 			}
+			}
+			</script>
+
+</body>
+</html>
+
+		
