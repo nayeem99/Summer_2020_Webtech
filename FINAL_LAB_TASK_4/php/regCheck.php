@@ -1,5 +1,4 @@
 <?php 
-<?php 
 require_once('../service/userService.php');
 $username=$_POST['name'];
 $password=$_POST['password'];
@@ -11,8 +10,7 @@ $user = [
 			];
 			
 $status = insert($user);
-echo $status;
-?>
-
+echo "RECIEVED";
 
 ?>
+
