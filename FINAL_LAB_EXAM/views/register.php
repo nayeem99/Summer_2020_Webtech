@@ -28,7 +28,7 @@
 				</tr>
 				<tr>
 					<td>Password</td>
-					 <td><input type="text" id="password" name="password" ></td>
+					 <td><input type="password" id="password" name="password" ></td>
                     <td id="nameMsg"></td>
 				</tr>
 				<tr>
@@ -38,7 +38,7 @@
 				</tr>
 				<tr>
 					<td>Contact No</td>
-					 <td><input type="text" id="contact" name="contact"  ></td>
+					 <td><input type="text" id="email" name="email"  ></td>
                     <td id="nameMsg"></td>
 				</tr>
 				<tr>
@@ -52,7 +52,7 @@
 	function f1(){
 
 					var name = document.getElementById('name').value;
-					var email = document.getElementById('contact').value;
+					var email = document.getElementById('email').value;
 					var password = document.getElementById('password').value;
 					var username = document.getElementById('username').value;
 					//alert('name='+name+'&password='+password+'&email='+email);
